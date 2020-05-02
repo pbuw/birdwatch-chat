@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdwatch 2020 | Unterwasser im Toggenburg</title>
+    <meta name="description" content="Verfolge live per Webcam wie Vogelbabies in Unterwasser (Toggenburg) schlüpfen.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img id="birdy" src="https://birdwatch.bruegger.sg/images/cam.jpg">
+<div id="chat">
+    <chat>
+    </chat>
+    <form onsubmit="return false;">
+        <input class="uk-input" id="message" required>
+        <button class="uk-button uk-button-primary" type="submit">Send</button>
+    </form>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>
