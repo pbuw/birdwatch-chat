@@ -1,5 +1,12 @@
 $(document).ready(function () {
-
+    if (Notification.permission != "granted") {
+        Notification.requestPermission(function (permission) {
+            // If the user accepts, let's create a notification
+            if (permission === "granted") {
+                var notification = new Notification("Hi there!", {icon: 'fly.png'});
+            }
+        });
+    }
     $("button").click(function () {
         console.log("sdsd");
         $.post("https://chat.birdwatch.bruegger.sg/add", {message: $("#message").val()})
@@ -20,6 +27,7 @@ $(document).ready(function () {
                     $.each(result, function (i, item) {
                         if ($("#" + this["id"]).length == 0) {
                             $("chat").prepend("<div class='uk-card uk-card-default uk-card-body uk-margin animated fadeIn' id='" + this["id"] + "'>" + this["message"] + "<br><small>" + this["datetime_created"] + "</small></div>");
+                            new Notification(this["message"], {icon: 'fly.png'});
                         }
                     });
                     poll();
