@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    if (("Notification" in window)) {
     if (Notification.permission != "granted") {
         Notification.requestPermission(function (permission) {
             // If the user accepts, let's create a notification
@@ -7,6 +8,8 @@ $(document).ready(function () {
             }
         });
     }
+    }
+
     $("button").click(function () {
         console.log("sdsd");
         $.post("https://chat.birdwatch.bruegger.sg/add", {message: $("#message").val()})

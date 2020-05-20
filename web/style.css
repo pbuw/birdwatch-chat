@@ -1,5 +1,7 @@
+html {
+  background-color: black; }
+
 #chat {
-  background-color: rgba(255, 255, 255, 0.52);
   max-width: 20vw;
   position: absolute;
   top: 50px;
@@ -10,13 +12,23 @@
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
-    height: 80vh; }
+    height: 80vh;
+    border-bottom: 2px black solid; }
+    #chat chat .uk-card {
+      background-color: rgba(0, 0, 0, 0.73);
+      border-radius: 20px; }
     #chat chat div {
       width: 100%; }
+  #chat input, #chat button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.73);
+    border-color: #282828;
+    border-radius: 20px; }
 
 @media screen and (max-width: 800px) {
   body {
-    background: none; }
+    background: none;
+    background-color: black; }
 
   #chat {
     position: relative;
